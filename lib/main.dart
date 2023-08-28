@@ -4,8 +4,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:minesweeper/dialog.dart';
 import 'package:minesweeper/model.dart';
 import 'package:minesweeper/state.dart';
+import 'package:universal_html/html.dart' as html;
 
 void main() {
+  html.document.onContextMenu.listen((evt) => evt.preventDefault());
   runApp(const ProviderScope(child: MyApp()));
 }
 
