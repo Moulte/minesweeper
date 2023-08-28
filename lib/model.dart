@@ -54,7 +54,6 @@ enum PlayState {
   END
 }
 
-
 class DialogNotif {
   final String message;
   final String validateAction;

@@ -1,14 +1,13 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:minesweeper/dialog.dart';
 import 'package:minesweeper/model.dart';
 import 'package:minesweeper/state.dart';
+import 'package:universal_html/html.dart' as html;
 
 void main() {
-  window.document.onContextMenu.listen((evt) => evt.preventDefault());
+  html.document.onContextMenu.listen((evt) => evt.preventDefault());
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -190,7 +189,6 @@ class MineTile extends ConsumerWidget {
                     );
               }
             },
-            
       child: Container(
         decoration: BoxDecoration(
           color: cellState.revealed ? Colors.white : Colors.grey,
